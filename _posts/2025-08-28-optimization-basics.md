@@ -63,7 +63,9 @@ pseudocode: true
 
 # Introduction to ISTA
 
-This is a blog for reviewing important optimization concepts that are critical for understanding ISTA. ISTA is an algorithm that applies proximal gradient to the LASSO objective function when solving sparse coding problem give an overcomplete dictionary. The objective function of the sparse coding with an overcomplete dictionary is as follow:
+This is a blog for reviewing important optimization concepts that are critical for understanding ISTA. Before we begin, I would like to emphasize how important optimization is in computer science. Professor Yi Ma once said in his lecture that, "Computing is optimization. Optimization is computing". Most problems lack closed-form solutions, so numerical optimization methods are required。 
+
+ISTA is an algorithm that applies proximal gradient to the LASSO objective function when solving sparse coding problem give an overcomplete dictionary. The objective function of the sparse coding with an overcomplete dictionary is as follow:
 
 $$\begin{align}
 \min_{\mathbf{Z} \in \mathbb{R}^{d \times N}} \left\{ \left\| \mathbf{X} - \mathbf{A}\mathbf{Z} \right\|_F^2 + \lambda \|\mathbf{Z}\|_1 \right\}
@@ -253,7 +255,7 @@ $$
 x_{k+1} = \mathrm{prox}_{g, \frac{1}{\beta}}\left( x_k - \frac{1}{\beta} \nabla f(x_k) \right) = \mathrm{prox}_{g, \frac{1}{\beta}}\left(w_k \right) = \arg\min_x\, \frac{\beta}{2} \left\| x - w_k \right\|_2^2 + g(x)
 $$
 
-This combines the fast convergence of gradient descent for the smooth part with the regularization/control of the non-smooth part via the proximal operator. The resulting algorithm enjoys the same O(1/k) convergence rate as in the smooth case. Recognizing special structure in our problem of interest yields a significantly more accurate and eﬃcient algorithm. In fact, we can further apply acceleration method similar to acceleration method for purely smooth function to speed up the convergence! This is also the key reason how people may come up with Adam, one of the most popular optimizer in deep learning. We may talk about this in the future blog. 
+This combines the fast convergence of gradient descent for the smooth part with the regularization/control of the non-smooth part via the proximal operator. *Convergence proofs are possible when the step size is $\frac{1}{\beta}$, just like gradient descent for smooth and convex function.* The resulting algorithm enjoys the same O(1/k) convergence rate as in the smooth case. Recognizing special structure in our problem of interest yields a significantly more accurate and eﬃcient algorithm. In fact, we can further apply acceleration method similar to acceleration method for purely smooth function to speed up the convergence! This is also the key reason how people may come up with Adam, one of the most popular optimizer in deep learning. We may talk about this in the future blog. 
 
 ## Solving LASSO by proximal gradient
 
@@ -350,14 +352,22 @@ L_{\nabla_{\mu}f} = \mu \|\mathbf{A}\|_2^2.
 This increases linearly with $\mu$: The larger $\mu$ is, the harder the unconstrained problem is to solve! We can then employ the augmented Lagrange multiplier (ALM) technique to
 alleviate this diﬃculty.
 
-# Connection between ISTA and deep network
+# Connection between ISTA and deep network - LISTA
 Recall that in each layer of forward pass of feature transformation in ISTA is given by the following process:
 
 $$\begin{align}
 \mathbf{Z}_{\ell+1} = S_{\eta, \lambda} \left( \mathbf{Z}_\ell - 2\eta (\mathbf{A}_\ell)^\top \left( \mathbf{A}_\ell \mathbf{Z}_\ell - \mathbf{X} \right) \right),\quad \forall \ell \in [L].
 \end{align}$$
 
-It looks like the forward pass of a deep neural network with weights given by $\mathbf{A}$. The first part of this blog
+It looks like the forward pass of a deep neural network with weights given by $\mathbf{A}$. The first part of this blog. Neural network architectures are actually themselves operator in optimization. When we say training a neural network we are actually referring to making each layer of operators in the neural network better and better.
+
+# My problems and potential research directions
+In ISTA, the number of iteration is not fixed and we stop improving when it converges. Also, the dictionary $\mathbf{A}$ is provided. LISTA, on the other hand, is an unrolled version of ISTA in which we only seek to learn $\mathbf{A}^{\ell}$ for the layerwise learnable sparse coding iterations. The following are some of my questions:
+
+1. In layerwise learned sparse-coding, hy do we have different $\mathbf{A}^\ell$ instead of one single dictionary?
+2. How do we determine the number of layers?
+3. How can we get rid of backpropagation?
+
 
 
 

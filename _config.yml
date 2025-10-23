@@ -152,6 +152,11 @@ collections:
     output: true
   projects:
     output: true
+  # gastronomist:
+  #   output: true
+  #   defaults:
+  #     layout: post 
+    
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -257,9 +262,19 @@ jekyll-archives:
       categories: "/blog/:type/:name/"
   books:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+  # gastronomist:
+  #   enabled: [year, tags, categories] # enables year, tag and category archives for gastronomist collection
+  #   permalinks:
+  #     year: "/gastronomist/:year/"
+  #     tags: "/gastronomist/:type/:name/"
+  #     categories: "/gastronomist/:type/:name/"
 
 display_tags: ["optimization","representation_learning","reinforcement_learning"] # these tags will be displayed on the front page of your blog
 display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
+
+# # Gastronomist collection display settings
+# gastronomist_display_tags: ["restaurant-review", "recipe", "food-photography", "culinary-travel"] # these tags will be displayed on the gastronomist page
+# gastronomist_display_categories: ["restaurants", "recipes", "food-science"] # these categories will be displayed on the gastronomist page
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar

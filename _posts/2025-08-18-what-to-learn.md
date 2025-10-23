@@ -65,9 +65,48 @@ _styles: >
 
 # What learning is all about? Or at least, what are modern methods actually doing?
 
-In nature, data in high dimensional space has low dimensional support. Data lie precisely on geomoetric structures such as subspaces or surfaces. Such constraint make data highly dependent on one another. In other words, natural data is predictable. Completion is perhaps another name of prediction. Denoise and error correction, are tasks that are enabled by the fact that data has constraints.
+In nature, data in high dimensional space has low dimensional support. Data lie precisely on geomoetric structures such as subspaces or surfaces. Some belong to a subspace, some belong to a mixture of subspaces or manifolds, most of the time we don't know the dimension of each component. Such constraint make data highly dependent on one another. In other words, natural data is predictable. Completion is perhaps another name of prediction. Denoise and error correction, are tasks that are enabled by the fact that data has constraints.
 
 Thus, we can say that learning is useful as it aims at, first, identifying and representing the low-dimensional structure of data. Next, we utilize the low-dimensional structure to inference for useful downstream tasks.
+
+# Why learning the model $p(x)$ is useful? - Bayesian inference point of view
+Most modern machine learning methods attempt to identify the low dimensional structure of the data distribution, either by getting hold of thosse distributions analytically (e.g. PCA) or empirically(e.g. Neural Network). Why is that useful? Such learnt low-dimensional structure of data is in fact the model of the world, and in Bayesian language, the prior. Almost all practical applications can be viewed as a special case of the following inference problem: given an observation $y$ that depends on $x$,
+
+$$
+\begin{align}
+y = h(x) + w
+\end{align}
+$$
+
+where $h(\cdot)$ represents the measurements of a part of $x$ or its certain observed attributes and $w$ represent the measurement noise, solve the "inverse problem" of obtaining the most likely estimate $\hat{x}(y)$ of $x$. Solving this is equivalent to 
+
+$$
+\begin{align}
+\hat{x} = \arg\max_{x} p(x\mid y)
+\end{align}
+$$
+
+And by Bayes' rule:
+
+
+$$\begin{align}
+p(x \mid y) = \frac{p(y \mid x) p(x)}{p(y)}
+\end{align}$$
+
+Therefore we can rewrite the problem as:
+$$
+\begin{align}
+\hat{x} = \arg\max_{x} [\log p(y \mid x) + \log p(x)]
+\end{align}
+$$
+
+Last but not the least, another application of get ahold of the conditional probability $p(x \mid y)$ is computing the conditional expectation estimate:
+
+$$\begin{align}
+\hat{x} = \mathbb{E}[x \mid y] = \int x\, p(x \mid y)\, dx
+\end{align}$$
+
+(Please confirm if (5) is a different application than (4)).
 
 Our questions then become:
 1. How to learn and represent the data
@@ -332,6 +371,29 @@ $$\begin{align}
 where $\mathbf{U} \in \mathbb{R}^{D \times Kd}$
 
 A relaxation is to assume matrix $\mathbf{U} \in \mathbb{R}^{D \times m}$ where $m$ may be smaller or larger than $D$. This leads to sparse dictionary learning problem. There are both geometric and physical/modeling motivations for considering $d \ll m$. The problem is thus turned to be an overcomplete dictionary learning problem. The motivation includes having a richer mixtures of subspaces and some computational experiments in the past reveals the additional modeling power conferred by an overcomplete representation, for example, Bruno Olshausen's paper on overcomplete dictionary learning.
+
+## Dictionary Learning vs Traditional "by-design" method
+
+### Advantages of Dictionary Learning Over Traditional "By-Design" Methods
+
+Traditional "by-design" methods for constructing bases—such as the Fourier Transform, Wavelet Transform, or even principal component analysis (PCA)—use mathematically engineered bases that are optimal for broad classes of signals, but agnostic to the specific data at hand. Dictionary learning, in contrast, seeks to **adapt the basis (the dictionary) directly from the dataset itself**, enabling several key advantages:
+
+#### 1. **Data Adaptivity**
+
+- **By-Design Methods:** Bases like Fourier are fixed a priori; they are not tailored for the specifics of your data.
+- **Dictionary Learning:** Learns a dictionary directly from data, giving basis elements that closely match typical data patterns (edges, textures, motifs, etc.). This often leads to sparser and more informative representations.
+
+#### 2. **Sparsity and Efficiency**
+
+- **By-Design Methods:** Real-world signals are often not sparsely represented in global bases like Fourier or even wavelets. For example, Discrete Cosine Transform had been applied on image compression but in fact it was a poor method to deal with images, since most real-world images have sharp edges which result in the image being not band-limited as a signal, thus it is poorly represented by the transformed representation.
+- **Dictionary Learning:** By adapting to data, learned dictionaries can represent each sample using only a few active atoms (columns), which can improve compression, denoising, and interpretability.
+
+#### 3. **Expressivity and Overcompleteness**
+
+- **By-Design Methods:** Predefined bases are usually complete or orthogonal but not overcomplete, limiting the richness of representation.
+- **Dictionary Learning:** Allows learning **overcomplete dictionaries** (more atoms than dimensions), enabling richer, more flexible representations and capturing more complex or nuanced structures in the data.
+
+**In essence, dictionary learning empowers us to discover the most efficient building blocks for our data, often leading to better representations and improved performance in practical machine learning and signal processing applications.**
 
 ## Overcomplete dictionary learning
 To learn $\mathbf{U}$, the corresponding optimization problem can be written as follow:
