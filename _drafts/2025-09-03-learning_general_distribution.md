@@ -61,3 +61,13 @@ _styles: >
     text-align: center;
     font-size: 16px;
   }
+
+---
+
+My best guess of the purpose of learning at this moment is to "encode" the underlying distribution of the data.
+
+With the data we can:
+1. Generate new sample from the distribution
+2. Inference with the learnt distribution
+
+How to evaluate the learned distribution is by rate 

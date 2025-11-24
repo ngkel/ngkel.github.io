@@ -359,7 +359,10 @@ $$\begin{align}
 \mathbf{Z}_{\ell+1} = S_{\eta, \lambda} \left( \mathbf{Z}_\ell - 2\eta (\mathbf{A}_\ell)^\top \left( \mathbf{A}_\ell \mathbf{Z}_\ell - \mathbf{X} \right) \right),\quad \forall \ell \in [L].
 \end{align}$$
 
-It looks like the forward pass of a deep neural network with weights given by $\mathbf{A}$. The first part of this blog. Neural network architectures are actually themselves operator in optimization. When we say training a neural network we are actually referring to making each layer of operators in the neural network better and better.
+It looks like the forward pass of a deep neural network with weights given by $\mathbf{A}$. The first part of this blog. Neural network architectures are actually themselves operator in optimization. When we say training a neural network we are actually referring to making each layer of operators in the neural network better and better. Learned ISTA is an algorithm that provided pairs $(\mathbf{X}, \mathbf{Z})$, we seek to learn $\mathbf{A}_\ell$ for the layerwise learnable sparse coding iteration, for example, by back-propagation.
+
+# Back-propagation
+Rever-mode, recursion.
 
 # My problems and potential research directions
 In ISTA, the number of iteration is not fixed and we stop improving when it converges. Also, the dictionary $\mathbf{A}$ is provided. LISTA, on the other hand, is an unrolled version of ISTA in which we only seek to learn $\mathbf{A}^{\ell}$ for the layerwise learnable sparse coding iterations. The following are some of my questions:
