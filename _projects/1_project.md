@@ -1,8 +1,9 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
+title: Whitebox Transformer Implementation
+description: Interpretable deep learning architecture and data representation
+img: assets/img/project_whitebox_transformer_cover.png
+redirect: https://github.com/ngkel/crate_implementation
 importance: 1
 category: work
 related_publications: true
