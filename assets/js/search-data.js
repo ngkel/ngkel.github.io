@@ -37,7 +37,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/books/";
               },
-            },{id: "post-optimization-from-basics-to-ista",
+            },{id: "post-compression-via-denoising",
+        
+          title: "Compression via denoising",
+        
+        description: "Idealistic models that inspire deep network structures",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/diffusion-denoising/";
+          
+        },
+      },{id: "post-optimization-from-basics-to-ista",
         
           title: "Optimization from basics to ISTA",
         
