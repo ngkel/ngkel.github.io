@@ -40,7 +40,7 @@ toc:
         subsections:
           - name: The form of denoiser for GMM
           - name: Yet in reality, we have are not given the target distribution and we need to learn it...
-          - name: What should be a good model architecture for ${\mathbf{x}}_\theta(t, \mathbf{x}_t)$?
+          - name: What should be a good model architecture for the denoiser to be learnt?
           - name: Lesson from optimization tells us that 1 big step is not enough
           - name: Recap of key ideas
             subsections:
