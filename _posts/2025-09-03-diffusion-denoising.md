@@ -33,16 +33,21 @@ bibliography: 2018-12-22-distill.bib
 #   - we may want to automate TOC generation in the future using
 #     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
 toc:
-  - name: What learning is all about? Or at least, what are modern methods actually doing?
-  - name: Learning problems that are solvable by analytical approach
-  # if a section has subsections, you can add them as follows:
+  - name: Complexity of a data distribution
+  - name: Minizing coding rate（i.e. entropy）
     subsections:
-      - name: PCA - finding the single subspace that best fits the data
-      - name: Power Iteration - Workhorse of PCA
-      - name: Limitation of PCA
-      - name: Mixtures of Subspaces and Sparsely-Used Dictionaries
-      - name: Overcomplete dictionary learning
-  - name: Learned ISTA
+      - name: Diffusion and Denoising Process
+        subsections:
+          - name: The form of denoiser for GMM
+          - name: Yet in reality, we have are not given the target distribution and we need to learn it...
+          - name: What should be a good model architecture for ${\mathbf{x}}_\theta(t, \mathbf{x}_t)$?
+          - name: Lesson from optimization tells us that 1 big step is not enough
+          - name: Recap of key ideas
+            subsections:
+              - name: Diffusion
+              - name: Sampling and denoiser
+          - name: Different ways to diffues and denoise
+  - name: Inferecne with learnt model
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
