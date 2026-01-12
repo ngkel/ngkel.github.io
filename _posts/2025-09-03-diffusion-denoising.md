@@ -272,6 +272,7 @@ $$\begin{align}
 \min_{\theta} \mathbb{E}_{t, x, x_t} [\|\bar{\mathbf{x}}_\theta(t, \mathbf{x}_t) - \mathbf{x}\|_2^2]
 \end{align}$$
 
+Last but not the least, the functional form of denoiser for GMM looks very much like attention mechanism in Transformer. This should be an interpretation of what the Transformer's attention component is doing: Once learnt the parameter of the Transformer's attention, it conducts denoising on input. What we mean by "training" a neural network is in fact learning the parameters of the denoiser, at least for he attention components.
 
 ## Inferecne with learnt model
 
