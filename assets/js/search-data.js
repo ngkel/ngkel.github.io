@@ -17,7 +17,7 @@ ninja.data = [{
             window.location.href = "/blog/";
           },
         },{id: "nav-projects",
-          title: "Projects",
+          title: "projects",
           description: "What I cannot create, I don&#39;t understand",
           section: "Navigation",
           handler: () => {
@@ -45,7 +45,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/diffusion-denoising/";
+            window.location.href = "/blog/2026/diffusion-denoising/";
           
         },
       },{id: "post-optimization-from-basics-to-ista",
@@ -56,7 +56,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/optimization-basics/";
+            window.location.href = "/blog/2026/optimization-basics/";
           
         },
       },{id: "post-what-to-learn-and-introduction-to-problems-solvable-by-analytical-approach",
@@ -78,14 +78,17 @@ ninja.data = [{
             },},{id: "news-project-whitebox-transformer-implementation-is-published",
           title: 'Project: Whitebox Transformer Implementation is published',
           description: "",
+          section: "News",},{id: "news-project-resemblance-of-cross-attention-like-operator-with-conditional-gmm-denoiser",
+          title: 'Project: Resemblance of Cross Attention like Operator with Conditional GMM Denoiser',
+          description: "",
           section: "News",},{id: "projects-whitebox-transformer-implementation",
           title: 'Whitebox Transformer Implementation',
           description: "Interpretable deep learning architecture and data representation",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+            },},{id: "projects-resemblance-of-cross-attention-like-operator-with-condional-gmm-denoiser",
+          title: 'Resemblance of Cross Attention like Operator with Condional GMM Denoiser',
+          description: "Demystify cross attention mechanism",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-project-3-with-very-long-name",
@@ -128,35 +131,7 @@ ninja.data = [{
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%79%6F%75@%65%78%61%6D%70%6C%65.%63%6F%6D", "_blank");
-        },
-      },{
-        id: 'social-inspire',
-        title: 'Inspire HEP',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://inspirehep.net/authors/1010907", "_blank");
-        },
-      },{
-        id: 'social-rss',
-        title: 'RSS Feed',
-        section: 'Socials',
-        handler: () => {
-          window.open("/feed.xml", "_blank");
-        },
-      },{
-        id: 'social-scholar',
-        title: 'Google Scholar',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://scholar.google.com/citations?user=qc6CJjYAAAAJ", "_blank");
-        },
-      },{
-        id: 'social-custom_social',
-        title: 'Custom_social',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://www.alberteinstein.com/", "_blank");
+          window.open("mailto:%6B%61%6C%6F%6B%73%65%72%69%6F%75%73@%67%6D%61%69%6C.%63%6F%6D", "_blank");
         },
       },{
       id: 'light-theme',
