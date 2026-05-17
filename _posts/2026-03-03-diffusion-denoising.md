@@ -4,7 +4,7 @@ title: Compression via denoising
 description: Idealistic models that inspire deep network structures
 tags: representation_learning
 giscus_comments: true
-date: 2025-09-03
+date: 2026-03-03
 featured: true
 mermaid:
   enabled: true

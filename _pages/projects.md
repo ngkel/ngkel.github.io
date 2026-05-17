@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Projects
+title: projects
 permalink: /projects/
 description: What I cannot create, I don't understand
 nav: true
 nav_order: 3
-display_categories: [work, fun]
+display_categories: [learning]
 horizontal: false
 ---
 

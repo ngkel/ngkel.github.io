@@ -1,10 +1,11 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: Resemblance of Cross Attention like Operator with Condional GMM Denoiser
+description: Demystify cross attention mechanism
+img: assets/img/projects/project_2/cover.png
+redirect: https://github.com/ngkel/conditional_inference
 importance: 2
-category: hidden
+category: learning
 giscus_comments: true
 ---
 

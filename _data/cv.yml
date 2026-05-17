@@ -2,96 +2,91 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Kelvin Ng
     - name: Date of Birth
-      value: 14th March 1879
+      value: 7th May 1997
     - name: Languages
-      value: English, German
+      value: English, Cantonese, Mandarin
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: BSc in Mechanical Engineering
+      institution: The University of Hong Kong
+      year: 2019
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - title: 1st Class Honours.
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+            - Microsoft Innotech Law Hackathon 2018 - First Runner-up.
+            - Fuzzy system and neural network (A-)
+    - title: Data Science Summer Camp - Theory, Algorithms and Applications 
+      institution: Institute of Data Science, The University of Hong Kong
+      year: 2023
       description:
-        - Description 1.
-        - Description 2.
+        - Machine learning performance evaluation, Bayesian classifier, linear programming, nonlinear programming, network theory
+    - title: Reinforcement Learning Specialization - Online Course
+      institution: University of Alberta
+      year: 2022
+      description:
+        - Understand the space of RL algorithms (TD learning, Monte Carlo, Sarsa, Q-Learning, Policy Gradient, Dyna and more)
+        - Implement RL algorithms (TD, Expected Sarsa, Q-Learning, Dyna, Actor-Critic) on toy datasets, in both discrete and continuous state environments
+    - title: Natural Language Processing with Sequence Models - Online Course
+      institution: Deeplearnging.ai
+      year: 2022
+      description:
+        - Learn about neural networks for sequential data modeling (RNN, LSTM, GRUs)
+        - Implement sequential model on different tasks (Named Entity Recognition, Next-Word Generator, Sentiment Analysis)
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Performance Manager - Commercial Team
+      institution: Foodpanda Hong Kong
+      year: 2021 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - title: Implement LLM algorithm for competitor and product level analysis.
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+            - OpenAI API
+        - title: Develop dashboards, visualizations and regular reports to facilitate efficient data analysis on the topics of market competition, profit and loss, vendors acquisition and churn.
+          contents:
+            - Tableau, Looker Studio, BigQuery
+        - title: Manage ETL process for data warehouse.
+          contents:
+            - DBT, Airflow
+        - title: Build vendor grading machine learning model to predict vendor performance and churn risk.
+          contents:
+            - Python, Pandas, NumPy, Scikit-learn, SciPy, Matplotlib, Seaborn, Plotly, Dash, Streamlit
+    - title: Data Science Analyst
+      institution: Hong Kong Telecom
+      year: 2020 - 2021
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
+        - Build machine learning model for customer churn prediction of LTS service and automate feature engineering and model training pipeline
+        - Create and schedule pipelines of web-crawling to extract data from external websites for sales strategies enhancement, competitor alert and machine learning model feature enrichment
+        - Conduct customer segmentation for Club Shopping from cross business unit data to understand customer interests and preferences for target marketing
+   
+- title: Projects
+  type: nested_list
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
+    - title: <a href="https://github.com/ngkel/crate_implementation">Whitebox Transformer Implementation</a>
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - Implement CRATE architecture for image classification task on Fashion-MNIST dataset.
+        - Visualize the low-rankness of the representation, autocorrelation of subspace learnt in each layer of MSSA.
+        - Visualize the semantic meaning of each attention head.
+    - title: <a href="https://github.com/ngkel/conditional_inference">Resemblance of Cross Attention like Operator with Conditional GMM Denoiser</a>
       items:
-        - Max Planck Medal
+        - Train conditional GMM denoise.
+        - Visualize the conditional sampling results and interpret the results.
+        - Illustrate the resemblance of cross attention like operator with conditional GMM denoiser.
 
+  
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Representation Learning.
       items:
         - Description 1.
         - Description 2.
-    - title: Topic 2.
+    - title: Reinforcement Learning.
       items:
         - Description 1.
         - Description 2.
-
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.

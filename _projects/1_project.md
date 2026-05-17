@@ -5,7 +5,7 @@ description: Interpretable deep learning architecture and data representation
 img: assets/img/project_whitebox_transformer_cover.png
 redirect: https://github.com/ngkel/crate_implementation
 importance: 1
-category: work
+category: learning
 related_publications: true
 ---
 

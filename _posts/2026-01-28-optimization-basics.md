@@ -4,7 +4,7 @@ title: Optimization from basics to ISTA
 description: 
 tags: optimization
 giscus_comments: true
-date: 2025-08-28
+date: 2026-01-28
 featured: true
 mermaid:
   enabled: true
