@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: Compression via denoising
-description: Idealistic models that inspire deep network structures
+description: Attention-like operator derived for solving GMM denoising problem
 tags: representation_learning
 giscus_comments: true
 date: 2026-03-03
@@ -37,17 +37,15 @@ toc:
   - name: Minizing coding rate（i.e. entropy）
     subsections:
       - name: Diffusion and Denoising Process
-        subsections:
-          - name: The form of denoiser for GMM
-          - name: Yet in reality, we have are not given the target distribution and we need to learn it...
-          - name: What should be a good model architecture for the denoiser to be learnt?
-          - name: Lesson from optimization tells us that 1 big step is not enough
-          - name: Recap of key ideas
-            subsections:
-              - name: Diffusion
-              - name: Sampling and denoiser
-          - name: Different ways to diffues and denoise
-  - name: Inferecne with learnt model
+      - name: The form of denoiser for GMM
+      - name: Yet in reality, we have are not given the target distribution and we need to learn it...
+      - name: What should be a good model architecture for ${\mathbf{x}}_\theta(t, \mathbf{x}_t)$?
+      - name: Lesson from optimization tells us that 1 big step is not enough
+      - name: Recap of key ideas
+      - name: Diffusion
+      - name: Sampling and denoiser
+      - name: Different ways to diffues and denoise
+      - name: Inferecne with learnt model
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -79,7 +77,7 @@ where $$\mathbf{x}_i \sim p(\mathbf{x}_i)$$
 The complexity of the target distribution $p(\mathbf{x_i})$ is measured by entropy:
 
 $$\begin{align}
-H(\mathbf{x}) \coloneqq \mathbb{E}[\log 1/p(\mathbf{x})] = - \sum_{i=1}^{N} p(\mathbf{x}_i) \log p(\mathbf{x}_i)
+H(\mathbf{x}) \mathrel{:=} \mathbb{E}[\log 1/p(\mathbf{x})] = - \sum_{i=1}^{N} p(\mathbf{x}_i) \log p(\mathbf{x}_i)
 \end{align}$$
 
 Please be aware that we have not talked about learnt distribution, which would be represented by the notation $q(\mathbf{x}_i)$ in the future. All we measure by the entropy formula provided above is the complexity of the target distribution which can be "complicated" or "simple" but we are still aiming at learning them. But one thing we can be quite sure is that the distributions of interest, especially of real world data, are nearly low-dimensional. Therefore we can expect that their entropy should be small.
@@ -101,7 +99,7 @@ $$\begin{align}
 Once we obtained the denoiser, we can start from a high entropy distribution and sample from it, then gradually transform it to a data point that is close to the target distribution. The $\bar{x}^*(t, \cdot)$ has another form or math meaning, which is (not limited to (2)): 
 
 $$\begin{align}
-\bar{\mathbf{x}}^*(t, \boldsymbol{\xi}) \coloneqq \mathbb{E}[\mathbf{x} \mid \mathbf{x}_t = \boldsymbol{\xi}]
+\bar{\mathbf{x}}^*(t, \boldsymbol{\xi}) \mathrel{:=} \mathbb{E}[\mathbf{x} \mid \mathbf{x}_t = \boldsymbol{\xi}]
 \end{align}$$
 
 If the noising process follow the (2), then 
@@ -275,4 +273,4 @@ $$\begin{align}
 Last but not the least, the functional form of denoiser for GMM looks very much like attention mechanism in Transformer. This should be an interpretation of what the Transformer's attention component is doing: Once learnt the parameter of the Transformer's attention, it conducts denoising on input. What we mean by "training" a neural network is in fact learning the parameters of the denoiser, at least for he attention components.
 
 ## Inferecne with learnt model
-
+(TBC)

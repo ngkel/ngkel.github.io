@@ -1,0 +1,125 @@
+---
+cv:
+  name: Kelvin Ng Ka Lok
+  headline: "email: kalokserious@gmail.com"
+  website: https://ngkel.github.io/
+  social_networks:
+  - network: GitHub
+    username: ngkel
+  sections:
+    general_information:
+    - label: Date of Birth
+      details: 7th May 1997
+    academic_interests:
+    - name: Representation Learning
+      date: ''
+      location: ''
+      summary: ''
+      highlights:
+      - Interpretable representation learning methods for building so-called world model, or system identification if you prefer that term
+      - Continual learning of representation for building world model
+      - Computer vision based representation learning
+    - name: Reinforcement Learning/Control Theory
+      date: ''
+      location: ''
+      summary: ''
+      highlights:
+      - Optimal control with learned world model
+      - How optimal control task may impact representation learning
+    Education:
+    - name: BSc in Mechanical Engineering - The University of Hong Kong
+      date: '2019'
+      location: ''
+      summary: ''
+      highlights:
+      - 1st Class Honours.
+      - Microsoft Innotech Law Hackathon 2018, First Runner-up.
+      - Fuzzy system and neural network (A-)
+    - name: Data Science Summer Camp - Theory, Algorithms and Applications - Institute of Data Science, The University of Hong Kong
+      date: '2023'
+      location: ''
+      summary: ''
+      highlights:
+      - Machine learning performance evaluation, Bayesian classifier, linear programming, nonlinear programming, network theory
+    - name: Reinforcement Learning Specialization - Online Course - University of Alberta
+      date: '2022'
+      location: ''
+      summary: ''
+      highlights:
+      - Understand the space of RL algorithms (TD learning, Monte Carlo, Sarsa, Q-Learning, Policy Gradient, Dyna and more)
+      - Implement RL algorithms (TD, Expected Sarsa, Q-Learning, Dyna, Actor-Critic) on toy datasets, in both discrete and continuous state environments
+    - name: Natural Language Processing with Sequence Models - Online Course - Deeplearnging.ai
+      date: '2022'
+      location: ''
+      summary: ''
+      highlights:
+      - Learn about neural networks for sequential data modeling (RNN, LSTM, GRUs)
+      - Implement sequential model on different tasks (Named Entity Recognition, Next-Word Generator, Sentiment Analysis)
+    experience:
+    - company: Foodpanda Hong Kong
+      position: Performance Manager - Commercial Team
+      date: 2021 - Present
+      location: ''
+      summary: ''
+      highlights:
+      - "Implement LLM algorithm for competitor and product level analysis. Tools: OpenAI API"
+      - "Develop dashboards, visualizations and regular reports to facilitate efficient data analysis on the topics of market competition, profit and loss, vendors acquisition and churn. Tools: Tableau, Looker Studio, BigQuery"
+      - "Manage ETL process for data warehouse. Tools: DBT, Airflow"
+      - "Build vendor grading machine learning model to predict vendor performance and churn risk. Tools: Python, Pandas, NumPy, Scikit-learn, SciPy, Matplotlib, Seaborn, Plotly, Dash, Streamlit"
+    - company: Hong Kong Telecom
+      position: Data Science Analyst
+      date: 2020 - 2021
+      location: ''
+      summary: ''
+      highlights:
+      - Build machine learning model for customer churn prediction of LTS service and automate feature engineering and model training pipeline
+      - Create and schedule pipelines of web-crawling to extract data from external websites for sales strategies enhancement, competitor alert and machine learning model feature enrichment
+      - Conduct customer segmentation for Club Shopping from cross business unit data to understand customer interests and preferences for target marketing
+    projects:
+    - name: "[Whitebox Transformer Implementation](https://github.com/ngkel/crate_implementation)"
+      date: ''
+      location: ''
+      summary: ''
+      highlights:
+      - Implement CRATE architecture for image classification task on Fashion-MNIST dataset.
+      - Visualize the low-rankness of the representation, autocorrelation of subspace learnt in each layer of MSSA.
+      - Visualize the semantic meaning of each attention head.
+    - name: "[Resemblance of Cross Attention like Operator with Conditional GMM Denoiser](https://github.com/ngkel/conditional_inference)"
+      date: ''
+      location: ''
+      summary: ''
+      highlights:
+      - Train conditional GMM denoise.
+      - Visualize the conditional sampling results and interpret the results.
+      - Illustrate the resemblance of cross attention like operator with conditional GMM denoiser.
+    - name: "[Mini World Model with CRATE](https://github.com/ngkel/mini_world_model)"
+      date: ''
+      location: ''
+      summary: ''
+      highlights:
+      - Implement LeWM from scratch.
+      - Replace ViT with CRATE.
+      - Explore, with CRATE replacing ViT, whether attention patterns can enable unsupervised video segmentation.
+      - Familiarize myself with Hydra and wandb for efficient experiment tracking.
+    languages:
+    - label: Languages
+      details: English, Cantonese, Mandarin
+design:
+  theme: classic
+  typography:
+    line_spacing: 0.5em
+  section_titles:
+    space_above: 0.35cm
+    space_below: 0.2cm
+  sections:
+    space_between_regular_entries: 0.9em
+    space_between_text_based_entries: 0.2em
+locale:
+  language: english
+settings:
+  current_date: today
+  render_command:
+    output_folder: rendercv_output
+    pdf_path: rendercv_output/kelvin_ng_cv.pdf
+  bold_keywords: []
+  pdf_title: Kelvin Ng - CV

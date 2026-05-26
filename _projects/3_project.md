@@ -1,11 +1,11 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
-img: assets/img/7.jpg
-redirect: https://github.com/ngkel/crate_implementation
+title: (WIP) Mini World Model with CRATE 
+description:
+img: assets/img/projects/project_3/cover.png
+redirect: https://github.com/ngkel/mini_world_model
 importance: 3
-category: hidden
+category: learning
 ---
 
 Every project has a beautiful feature showcase page.

@@ -8,6 +8,19 @@
     - name: Languages
       value: English, Cantonese, Mandarin
 
+- title: Academic Interests
+  type: nested_list
+  contents:
+    - title: Representation Learning
+      items:
+        - Interpretable representation learning methods for building so-called world model, or system identification if you prefer that term
+        - Continual learning of representation for building world model
+        - Computer vision based representation learning
+    - title: Reinforcement Learning/Control Theory
+      items:
+        - Optimal control with learned world model 
+        - How optimal control task may impact representation learning
+
 - title: Education
   type: time_table
   contents:
@@ -17,7 +30,7 @@
       description:
         - title: 1st Class Honours.
           contents:
-            - Microsoft Innotech Law Hackathon 2018 - First Runner-up.
+            - Microsoft Innotech Law Hackathon 2018, First Runner-up.
             - Fuzzy system and neural network (A-)
     - title: Data Science Summer Camp - Theory, Algorithms and Applications 
       institution: Institute of Data Science, The University of Hong Kong
@@ -77,16 +90,11 @@
         - Train conditional GMM denoise.
         - Visualize the conditional sampling results and interpret the results.
         - Illustrate the resemblance of cross attention like operator with conditional GMM denoiser.
+    - title: <a href="https://github.com/ngkel/mini_world_model">Mini World Model with CRATE</a>
+      items:
+        - Implement LeWM from scratch.
+        - Replace ViT with CRATE.
+        - Explore, with CRATE replacing ViT, whether attention patterns can enable unsupervised video segmentation.
+        - Familiarize myself with Hydra and wandb for efficient experiment tracking.
 
   
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Representation Learning.
-      items:
-        - Description 1.
-        - Description 2.
-    - title: Reinforcement Learning.
-      items:
-        - Description 1.
-        - Description 2.

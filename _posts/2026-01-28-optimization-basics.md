@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: Optimization from basics to ISTA
-description: 
+description: Deep learning architecture emerge from unrolling optimization step for solving LASSO
 tags: optimization
 giscus_comments: true
 date: 2026-01-28
@@ -36,10 +36,20 @@ toc:
   - name: Introduction to ISTA
   - name: Convex Functions
   - name: Gradient Descent
+    subsections:
+      - name: Proof of guarantee of improvement in each gradient step for $\beta$-smooth function with step size being $\frac{1}{\beta}$
   - name: Subgradient Method
+    subsections:
+      - name: Optimality condition of subgradient methods
+      - name: Convergence rate of subgradient method
   - name: Proximal Gradient Descent
+    subsections:
+      - name: Solving LASSO by proximal gradient
+      - name: Similarity of proximal operator and nonlinear function in deep network
   - name: How solution to LASSO inspire more efficient solution to basis pursuit
-  - name: Connection between ISTA and deep network
+  - name: Connection between ISTA and deep network - LISTA
+  - name: Back-propagation
+  - name: My problems and potential research directions
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
