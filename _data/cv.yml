@@ -90,7 +90,7 @@
         - Train conditional GMM denoise.
         - Visualize the conditional sampling results and interpret the results.
         - Illustrate the resemblance of cross attention like operator with conditional GMM denoiser.
-    - title: <a href="https://github.com/ngkel/mini_world_model">Mini World Model with CRATE</a>
+    - title: <a href="https://github.com/ngkel/mini_world_model">(WIP) Mini World Model with CRATE</a>
       items:
         - Implement LeWM from scratch.
         - Replace ViT with CRATE.
