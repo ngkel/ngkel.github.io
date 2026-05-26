@@ -30,11 +30,22 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-compression-via-denoising",
+        },{id: "post-temporal-straightening-for-latent-planning-in-control-theory-language",
+        
+          title: "Temporal Straightening for Latent Planning in Control Theory Language",
+        
+        description: "A revision on control theory basics and insight from temporal straightening paper",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/control-theory/";
+          
+        },
+      },{id: "post-compression-via-denoising",
         
           title: "Compression via denoising",
         
-        description: "Idealistic models that inspire deep network structures",
+        description: "Attention-like operator derived for solving GMM denoising problem",
         section: "Posts",
         handler: () => {
           
@@ -45,7 +56,7 @@ ninja.data = [{
         
           title: "Optimization from basics to ISTA",
         
-        description: "",
+        description: "Deep learning architecture emerge from unrolling optimization step for solving LASSO",
         section: "Posts",
         handler: () => {
           
@@ -84,9 +95,9 @@ ninja.data = [{
           description: "Demystify cross attention mechanism",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
+            },},{id: "projects-wip-mini-world-model-with-crate",
+          title: '(WIP) Mini World Model with CRATE',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
             },},{id: "projects-project-4",
