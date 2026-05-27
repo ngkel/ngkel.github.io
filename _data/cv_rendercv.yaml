@@ -98,7 +98,7 @@ cv:
       summary: ''
       highlights:
       - Implement LeWM from scratch.
-      - Replace ViT with CRATE.
+      - Replace ViT with a more interpretable architecture, CRATE, to study how spatiotemporal structure of data emerge in latent space.
       - Explore, with CRATE replacing ViT, whether attention patterns can enable unsupervised video segmentation.
       - Familiarize myself with Hydra and wandb for efficient experiment tracking.
     languages:

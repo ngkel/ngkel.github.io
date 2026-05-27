@@ -13,9 +13,10 @@
   contents:
     - title: Representation Learning
       items:
-        - Interpretable representation learning methods for building so-called world model, or system identification if you prefer that term
+        - Interpretable representation learning methods for building so-called world model/system identification
         - Continual learning of representation for building world model
         - Computer vision based representation learning
+        - How spatial semantics and temporal structure of data emerge
     - title: Reinforcement Learning/Control Theory
       items:
         - Optimal control with learned world model 
@@ -30,7 +31,7 @@
       description:
         - title: 1st Class Honours.
           contents:
-            - Microsoft Innotech Law Hackathon 2018, First Runner-up.
+            - Microsoft Innotech Law Hackathon 2018, First Runner-up
             - Fuzzy system and neural network (A-)
     - title: Data Science Summer Camp - Theory, Algorithms and Applications 
       institution: Institute of Data Science, The University of Hong Kong
@@ -57,16 +58,16 @@
       institution: Foodpanda Hong Kong
       year: 2021 - Present
       description:
-        - title: Implement LLM algorithm for competitor and product level analysis.
+        - title: Implement LLM algorithm for competitor and product level analysis
           contents:
             - OpenAI API
-        - title: Develop dashboards, visualizations and regular reports to facilitate efficient data analysis on the topics of market competition, profit and loss, vendors acquisition and churn.
+        - title: Develop dashboards, visualizations and regular reports to facilitate efficient data analysis on the topics of market competition, profit and loss, vendors acquisition and churn
           contents:
             - Tableau, Looker Studio, BigQuery
-        - title: Manage ETL process for data warehouse.
+        - title: Manage ETL process for data warehouse
           contents:
             - DBT, Airflow
-        - title: Build vendor grading machine learning model to predict vendor performance and churn risk.
+        - title: Build vendor grading machine learning model to predict vendor performance and churn risk
           contents:
             - Python, Pandas, NumPy, Scikit-learn, SciPy, Matplotlib, Seaborn, Plotly, Dash, Streamlit
     - title: Data Science Analyst
@@ -82,19 +83,19 @@
   contents:
     - title: <a href="https://github.com/ngkel/crate_implementation">Whitebox Transformer Implementation</a>
       items:
-        - Implement CRATE architecture for image classification task on Fashion-MNIST dataset.
-        - Visualize the low-rankness of the representation, autocorrelation of subspace learnt in each layer of MSSA.
-        - Visualize the semantic meaning of each attention head.
+        - Implement CRATE architecture for image classification task on Fashion-MNIST dataset
+        - Visualize the low-rankness of the representation, autocorrelation of subspace learnt in each layer of MSSA
+        - Visualize the semantic meaning of each attention head
     - title: <a href="https://github.com/ngkel/conditional_inference">Resemblance of Cross Attention like Operator with Conditional GMM Denoiser</a>
       items:
         - Train conditional GMM denoise.
-        - Visualize the conditional sampling results and interpret the results.
-        - Illustrate the resemblance of cross attention like operator with conditional GMM denoiser.
+        - Visualize the conditional sampling results and interpret the results
+        - Illustrate the resemblance of cross attention like operator with conditional GMM denoiser
     - title: <a href="https://github.com/ngkel/mini_world_model">(WIP) Mini World Model with CRATE</a>
       items:
-        - Implement LeWM from scratch.
-        - Replace ViT with CRATE.
-        - Explore, with CRATE replacing ViT, whether attention patterns can enable unsupervised video segmentation.
-        - Familiarize myself with Hydra and wandb for efficient experiment tracking.
+        - Implement LeWM from scratch
+        - Replace ViT with a more interpretable architecture, CRATE, to study how spatiotemporal structure of data emerge in latent space
+        - Explore, with CRATE replacing ViT, whether attention patterns can enable unsupervised video segmentation
+        - Familiarize myself with Hydra and wandb for efficient experiment tracking
 
   
